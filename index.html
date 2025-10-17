@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Moon - Personal Website</title>
+  <link rel="stylesheet" type="text/css" href="fancy.css">
+</head>
+<body>
+  <h1>Welcome to My Personal Website</h1>
+
+  <p>Hello! My name is <strong>Simon Moon</strong> and I am a student at <em>Kansas State University</em>. In my free time I enjoy lifting weights at Genesis Health Clubs and skateboarding in city park.</p>
+
+  <p>In this class (CIS115) I want to explore new <strong>technologies</strong> and improve my <em>coding</em> skills. Building small games and tools is something I find exciting.</p>
+
+  <p>I also enjoy reading about <strong>artificial intelligence</strong> and the future of <em>computer science</em>. I hope to have a good career in computer science when I graduate.</p>
+
+  <p>Outside of technology, I spend time doing <strong>photography</strong> and <em>traveling</em>. Both help me clear my mind and feel lessed stressed out, so I can be ready for school.</p>
+
+  <p>
+    <a href="about.html">About Me</a> | 
+    <a href="resume.html">Resume</a>
+  </p>
+
+  <h2>Play Tic-Tac-Toe!</h2>
+  <div id="board">
+    <table>
+      <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+      </tr>
+      <tr>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+        <td onclick="makeMove(this)"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    let currentPlayer = "X";
+    function makeMove(cell) {
+      if (cell.textContent === "") {
+        cell.textContent = currentPlayer;
+        currentPlayer = (currentPlayer === "X") ? "O" : "X";
+      }
+    }
+  </script>
+</body>
+</html>
